@@ -19,7 +19,7 @@ class TextViewController: UIViewController {
     var cFLAG = false
     
     let xmsLen = 30
-    let model = try! MACin100out300(configuration: MLModelConfiguration())
+    let model = try! MAC1by10_Re(configuration: MLModelConfiguration())
     var currentState = try? MLMultiArray(
         shape: [400 as NSNumber],
         dataType: MLMultiArrayDataType.double)
@@ -226,7 +226,7 @@ class TextViewController: UIViewController {
 //        print("getCoreOut: ",elapsed)
         
         guard let output = try? model.prediction(input:
-                                                    MACin100out300Input(accScalar: mlarrayAccScalar,accX: mlarrayAccX, accY: mlarrayAccY, accZ: mlarrayAccZ, attX: mlarrayAttX, attY: mlarrayAttY, attZ: mlarrayAttZ,  gyroScalar : mlarrayGyroScalar,  gyroX: mlarrayGyroX, gyroY: mlarrayGyroY, gyroZ: mlarrayGyroZ, stateIn: currentState!))
+                                                    MAC1by10_ReInput(accScalar: mlarrayAccScalar,accX: mlarrayAccX, accY: mlarrayAccY, accZ: mlarrayAccZ, attX: mlarrayAttX, attY: mlarrayAttY, attZ: mlarrayAttZ,  gyroScalar : mlarrayGyroScalar,  gyroX: mlarrayGyroX, gyroY: mlarrayGyroY, gyroZ: mlarrayGyroZ, stateIn: currentState!))
         else {
                 fatalError("Unexpected runtime error.")
         }
