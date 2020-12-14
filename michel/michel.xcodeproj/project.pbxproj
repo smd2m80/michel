@@ -15,6 +15,18 @@
 		9F8F865125830CE400361F3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F8F864F25830CE400361F3C /* LaunchScreen.storyboard */; };
 		9F8F865C25830CE400361F3C /* michelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F865B25830CE400361F3C /* michelTests.swift */; };
 		9F8F866725830CE400361F3C /* michelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F866625830CE400361F3C /* michelUITests.swift */; };
+		9F8F868725831B1200361F3C /* ScreenshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F868625831B1200361F3C /* ScreenshotViewController.swift */; };
+		9F8F868C25832DDA00361F3C /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F868B25832DD900361F3C /* TextViewController.swift */; };
+		9F8F869C258349DD00361F3C /* ScrollImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F869B258349DD00361F3C /* ScrollImageViewController.swift */; };
+		9F8F86A12585DA6300361F3C /* ToucheEventTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F86A02585DA6300361F3C /* ToucheEventTextView.swift */; };
+		9F8F86A62585E19200361F3C /* MAC1by10.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F86A52585E19200361F3C /* MAC1by10.mlmodel */; };
+		9F8F86AB258615EC00361F3C /* MAC6by1_1210_ShinBatch54_Re.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F86AA258615EC00361F3C /* MAC6by1_1210_ShinBatch54_Re.mlmodel */; };
+		9F8F86B02586346D00361F3C /* TextReViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F86AF2586346D00361F3C /* TextReViewController.swift */; };
+		9F8F86B52586367400361F3C /* ToucheEventTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F86B42586367400361F3C /* ToucheEventTextField.swift */; };
+		9F8F86BA2587216A00361F3C /* MAC1by10_Re.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F86B92587216A00361F3C /* MAC1by10_Re.mlmodel */; };
+		9F8F86BF2587389E00361F3C /* MAC100_50_prea_yokofk.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F86BE2587389D00361F3C /* MAC100_50_prea_yokofk.mlmodel */; };
+		9F8F86CE25875BDD00361F3C /* SensorDataCsvManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F86CD25875BDD00361F3C /* SensorDataCsvManager.swift */; };
+		9F8F86D32587931F00361F3C /* MACin100out300.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F86D22587931E00361F3C /* MACin100out300.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +61,18 @@
 		9F8F866225830CE400361F3C /* michelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = michelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F8F866625830CE400361F3C /* michelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = michelUITests.swift; sourceTree = "<group>"; };
 		9F8F866825830CE400361F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F8F868625831B1200361F3C /* ScreenshotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotViewController.swift; sourceTree = "<group>"; };
+		9F8F868B25832DD900361F3C /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		9F8F869B258349DD00361F3C /* ScrollImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollImageViewController.swift; sourceTree = "<group>"; };
+		9F8F86A02585DA6300361F3C /* ToucheEventTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToucheEventTextView.swift; sourceTree = "<group>"; };
+		9F8F86A52585E19200361F3C /* MAC1by10.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MAC1by10.mlmodel; sourceTree = "<group>"; };
+		9F8F86AA258615EC00361F3C /* MAC6by1_1210_ShinBatch54_Re.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MAC6by1_1210_ShinBatch54_Re.mlmodel; sourceTree = "<group>"; };
+		9F8F86AF2586346D00361F3C /* TextReViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextReViewController.swift; sourceTree = "<group>"; };
+		9F8F86B42586367400361F3C /* ToucheEventTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToucheEventTextField.swift; sourceTree = "<group>"; };
+		9F8F86B92587216A00361F3C /* MAC1by10_Re.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MAC1by10_Re.mlmodel; sourceTree = "<group>"; };
+		9F8F86BE2587389D00361F3C /* MAC100_50_prea_yokofk.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MAC100_50_prea_yokofk.mlmodel; sourceTree = "<group>"; };
+		9F8F86CD25875BDD00361F3C /* SensorDataCsvManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDataCsvManager.swift; sourceTree = "<group>"; };
+		9F8F86D22587931E00361F3C /* MACin100out300.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MACin100out300.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +126,20 @@
 				9F8F864425830CE000361F3C /* AppDelegate.swift */,
 				9F8F864625830CE000361F3C /* SceneDelegate.swift */,
 				9F8F864825830CE000361F3C /* ViewController.swift */,
+				9F8F868625831B1200361F3C /* ScreenshotViewController.swift */,
 				9F8F864A25830CE000361F3C /* Main.storyboard */,
+				9F8F868B25832DD900361F3C /* TextViewController.swift */,
+				9F8F86AF2586346D00361F3C /* TextReViewController.swift */,
+				9F8F869B258349DD00361F3C /* ScrollImageViewController.swift */,
+				9F8F86A52585E19200361F3C /* MAC1by10.mlmodel */,
+				9F8F86AA258615EC00361F3C /* MAC6by1_1210_ShinBatch54_Re.mlmodel */,
+				9F8F86B92587216A00361F3C /* MAC1by10_Re.mlmodel */,
+				9F8F86BE2587389D00361F3C /* MAC100_50_prea_yokofk.mlmodel */,
+				9F8F86D22587931E00361F3C /* MACin100out300.mlmodel */,
 				9F8F864D25830CE400361F3C /* Assets.xcassets */,
+				9F8F86CD25875BDD00361F3C /* SensorDataCsvManager.swift */,
+				9F8F86A02585DA6300361F3C /* ToucheEventTextView.swift */,
+				9F8F86B42586367400361F3C /* ToucheEventTextField.swift */,
 				9F8F864F25830CE400361F3C /* LaunchScreen.storyboard */,
 				9F8F865225830CE400361F3C /* Info.plist */,
 			);
@@ -258,9 +294,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F8F868C25832DDA00361F3C /* TextViewController.swift in Sources */,
+				9F8F869C258349DD00361F3C /* ScrollImageViewController.swift in Sources */,
+				9F8F86CE25875BDD00361F3C /* SensorDataCsvManager.swift in Sources */,
 				9F8F864925830CE000361F3C /* ViewController.swift in Sources */,
+				9F8F86A12585DA6300361F3C /* ToucheEventTextView.swift in Sources */,
 				9F8F864525830CE000361F3C /* AppDelegate.swift in Sources */,
+				9F8F868725831B1200361F3C /* ScreenshotViewController.swift in Sources */,
+				9F8F86D32587931F00361F3C /* MACin100out300.mlmodel in Sources */,
+				9F8F86A62585E19200361F3C /* MAC1by10.mlmodel in Sources */,
 				9F8F864725830CE000361F3C /* SceneDelegate.swift in Sources */,
+				9F8F86B02586346D00361F3C /* TextReViewController.swift in Sources */,
+				9F8F86AB258615EC00361F3C /* MAC6by1_1210_ShinBatch54_Re.mlmodel in Sources */,
+				9F8F86B52586367400361F3C /* ToucheEventTextField.swift in Sources */,
+				9F8F86BF2587389E00361F3C /* MAC100_50_prea_yokofk.mlmodel in Sources */,
+				9F8F86BA2587216A00361F3C /* MAC1by10_Re.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
