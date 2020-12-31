@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F2A87BD259B0A5A0077E215 /* NewBigImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2A87BC259B0A5A0077E215 /* NewBigImageViewController.swift */; };
+		9F2FEBAF25995A7600CC0439 /* OwnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2FEBAE25995A7600CC0439 /* OwnViewController.swift */; };
+		9F2FEBB425995B5D00CC0439 /* OwnWKWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2FEBB325995B5D00CC0439 /* OwnWKWebView.swift */; };
+		9F2FEBB925995F9100CC0439 /* SelfWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2FEBB825995F9100CC0439 /* SelfWindow.swift */; };
 		9F8F864525830CE000361F3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F864425830CE000361F3C /* AppDelegate.swift */; };
 		9F8F864725830CE000361F3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F864625830CE000361F3C /* SceneDelegate.swift */; };
 		9F8F864925830CE000361F3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F864825830CE000361F3C /* ViewController.swift */; };
@@ -27,6 +31,20 @@
 		9F8F86BF2587389E00361F3C /* MAC100_50_prea_yokofk.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F86BE2587389D00361F3C /* MAC100_50_prea_yokofk.mlmodel */; };
 		9F8F86CE25875BDD00361F3C /* SensorDataCsvManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F86CD25875BDD00361F3C /* SensorDataCsvManager.swift */; };
 		9F8F86D32587931F00361F3C /* MACin100out300.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F86D22587931E00361F3C /* MACin100out300.mlmodel */; };
+		9F8F86EB2587A39B00361F3C /* ScrollBigImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F86EA2587A39A00361F3C /* ScrollBigImageViewController.swift */; };
+		9F8F86F72587A74400361F3C /* MyUIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F86F62587A74400361F3C /* MyUIScrollView.swift */; };
+		9F8F86FC2587AAFB00361F3C /* MACby10_45_attNasi.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F86FB2587AAFB00361F3C /* MACby10_45_attNasi.mlmodel */; };
+		9F8F8718258A584700361F3C /* TryModelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F8717258A584700361F3C /* TryModelsViewController.swift */; };
+		9F8F8740258B51DF00361F3C /* PyMLsb300ms15mei_pred.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F873F258B51DF00361F3C /* PyMLsb300ms15mei_pred.mlmodel */; };
+		9F8F8748258B798B00361F3C /* PyMlyokomtb200ms_pred.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F8747258B798A00361F3C /* PyMlyokomtb200ms_pred.mlmodel */; };
+		9F8F8754258B825500361F3C /* PyMlyokomtb200ms_predSTD.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F8752258B825500361F3C /* PyMlyokomtb200ms_predSTD.mlmodel */; };
+		9F8F8755258B825500361F3C /* smdskjk200ms_std.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F8753258B825500361F3C /* smdskjk200ms_std.mlmodel */; };
+		9F8F875D258C4FA200361F3C /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F875C258C4FA200361F3C /* PopupViewController.swift */; };
+		9F8F8762258C6D0D00361F3C /* ZoomscrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F8761258C6D0C00361F3C /* ZoomscrollView.swift */; };
+		9F8F8773258C7BC500361F3C /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F8772258C7BC500361F3C /* FifthViewController.swift */; };
+		9F8F8778258CABC500361F3C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F8777258CABC400361F3C /* WebViewController.swift */; };
+		9FC22B9A259229E300AE05EB /* TestDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC22B99259229E300AE05EB /* TestDraw.swift */; };
+		9FC22B9F259870D100AE05EB /* PySensors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC22B9E259870D100AE05EB /* PySensors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +65,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F2A87BC259B0A5A0077E215 /* NewBigImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBigImageViewController.swift; sourceTree = "<group>"; };
+		9F2FEBAE25995A7600CC0439 /* OwnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnViewController.swift; sourceTree = "<group>"; };
+		9F2FEBB325995B5D00CC0439 /* OwnWKWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnWKWebView.swift; sourceTree = "<group>"; };
+		9F2FEBB825995F9100CC0439 /* SelfWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfWindow.swift; sourceTree = "<group>"; };
 		9F8F864125830CE000361F3C /* michel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = michel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F8F864425830CE000361F3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F8F864625830CE000361F3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +95,20 @@
 		9F8F86BE2587389D00361F3C /* MAC100_50_prea_yokofk.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MAC100_50_prea_yokofk.mlmodel; sourceTree = "<group>"; };
 		9F8F86CD25875BDD00361F3C /* SensorDataCsvManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDataCsvManager.swift; sourceTree = "<group>"; };
 		9F8F86D22587931E00361F3C /* MACin100out300.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MACin100out300.mlmodel; sourceTree = "<group>"; };
+		9F8F86EA2587A39A00361F3C /* ScrollBigImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollBigImageViewController.swift; sourceTree = "<group>"; };
+		9F8F86F62587A74400361F3C /* MyUIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUIScrollView.swift; sourceTree = "<group>"; };
+		9F8F86FB2587AAFB00361F3C /* MACby10_45_attNasi.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MACby10_45_attNasi.mlmodel; sourceTree = "<group>"; };
+		9F8F8717258A584700361F3C /* TryModelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryModelsViewController.swift; sourceTree = "<group>"; };
+		9F8F873F258B51DF00361F3C /* PyMLsb300ms15mei_pred.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PyMLsb300ms15mei_pred.mlmodel; sourceTree = "<group>"; };
+		9F8F8747258B798A00361F3C /* PyMlyokomtb200ms_pred.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PyMlyokomtb200ms_pred.mlmodel; sourceTree = "<group>"; };
+		9F8F8752258B825500361F3C /* PyMlyokomtb200ms_predSTD.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PyMlyokomtb200ms_predSTD.mlmodel; sourceTree = "<group>"; };
+		9F8F8753258B825500361F3C /* smdskjk200ms_std.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = smdskjk200ms_std.mlmodel; sourceTree = "<group>"; };
+		9F8F875C258C4FA200361F3C /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		9F8F8761258C6D0C00361F3C /* ZoomscrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomscrollView.swift; sourceTree = "<group>"; };
+		9F8F8772258C7BC500361F3C /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
+		9F8F8777258CABC400361F3C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		9FC22B99259229E300AE05EB /* TestDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDraw.swift; sourceTree = "<group>"; };
+		9FC22B9E259870D100AE05EB /* PySensors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PySensors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +136,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F2A87C1259B24050077E215 /* sumi */ = {
+			isa = PBXGroup;
+			children = (
+				9F8F869B258349DD00361F3C /* ScrollImageViewController.swift */,
+				9F8F8761258C6D0C00361F3C /* ZoomscrollView.swift */,
+				9F8F86F62587A74400361F3C /* MyUIScrollView.swift */,
+				9F8F86EA2587A39A00361F3C /* ScrollBigImageViewController.swift */,
+				9F2FEBB825995F9100CC0439 /* SelfWindow.swift */,
+				9F8F86AF2586346D00361F3C /* TextReViewController.swift */,
+				9F2FEBB325995B5D00CC0439 /* OwnWKWebView.swift */,
+				9F8F8717258A584700361F3C /* TryModelsViewController.swift */,
+				9F8F8772258C7BC500361F3C /* FifthViewController.swift */,
+				9F8F8777258CABC400361F3C /* WebViewController.swift */,
+			);
+			path = sumi;
+			sourceTree = "<group>";
+		};
 		9F8F863825830CE000361F3C = {
 			isa = PBXGroup;
 			children = (
@@ -124,22 +177,23 @@
 			isa = PBXGroup;
 			children = (
 				9F8F864425830CE000361F3C /* AppDelegate.swift */,
-				9F8F864625830CE000361F3C /* SceneDelegate.swift */,
 				9F8F864825830CE000361F3C /* ViewController.swift */,
-				9F8F868625831B1200361F3C /* ScreenshotViewController.swift */,
-				9F8F864A25830CE000361F3C /* Main.storyboard */,
 				9F8F868B25832DD900361F3C /* TextViewController.swift */,
-				9F8F86AF2586346D00361F3C /* TextReViewController.swift */,
-				9F8F869B258349DD00361F3C /* ScrollImageViewController.swift */,
-				9F8F86A52585E19200361F3C /* MAC1by10.mlmodel */,
-				9F8F86AA258615EC00361F3C /* MAC6by1_1210_ShinBatch54_Re.mlmodel */,
-				9F8F86B92587216A00361F3C /* MAC1by10_Re.mlmodel */,
-				9F8F86BE2587389D00361F3C /* MAC100_50_prea_yokofk.mlmodel */,
-				9F8F86D22587931E00361F3C /* MACin100out300.mlmodel */,
+				9F8F864A25830CE000361F3C /* Main.storyboard */,
+				9F8F868625831B1200361F3C /* ScreenshotViewController.swift */,
+				9FC22B9E259870D100AE05EB /* PySensors.swift */,
+				9F2A87BC259B0A5A0077E215 /* NewBigImageViewController.swift */,
+				9F2FEBAE25995A7600CC0439 /* OwnViewController.swift */,
+				9F8F875C258C4FA200361F3C /* PopupViewController.swift */,
+				9FC22B99259229E300AE05EB /* TestDraw.swift */,
+				9F8F8710258A579300361F3C /* pyMLmodel */,
+				9F8F86EF2587A59A00361F3C /* MAC */,
 				9F8F864D25830CE400361F3C /* Assets.xcassets */,
 				9F8F86CD25875BDD00361F3C /* SensorDataCsvManager.swift */,
 				9F8F86A02585DA6300361F3C /* ToucheEventTextView.swift */,
 				9F8F86B42586367400361F3C /* ToucheEventTextField.swift */,
+				9F8F864625830CE000361F3C /* SceneDelegate.swift */,
+				9F2A87C1259B24050077E215 /* sumi */,
 				9F8F864F25830CE400361F3C /* LaunchScreen.storyboard */,
 				9F8F865225830CE400361F3C /* Info.plist */,
 			);
@@ -162,6 +216,30 @@
 				9F8F866825830CE400361F3C /* Info.plist */,
 			);
 			path = michelUITests;
+			sourceTree = "<group>";
+		};
+		9F8F86EF2587A59A00361F3C /* MAC */ = {
+			isa = PBXGroup;
+			children = (
+				9F8F86FB2587AAFB00361F3C /* MACby10_45_attNasi.mlmodel */,
+				9F8F86A52585E19200361F3C /* MAC1by10.mlmodel */,
+				9F8F86AA258615EC00361F3C /* MAC6by1_1210_ShinBatch54_Re.mlmodel */,
+				9F8F86B92587216A00361F3C /* MAC1by10_Re.mlmodel */,
+				9F8F86BE2587389D00361F3C /* MAC100_50_prea_yokofk.mlmodel */,
+				9F8F86D22587931E00361F3C /* MACin100out300.mlmodel */,
+			);
+			path = MAC;
+			sourceTree = "<group>";
+		};
+		9F8F8710258A579300361F3C /* pyMLmodel */ = {
+			isa = PBXGroup;
+			children = (
+				9F8F873F258B51DF00361F3C /* PyMLsb300ms15mei_pred.mlmodel */,
+				9F8F8747258B798A00361F3C /* PyMlyokomtb200ms_pred.mlmodel */,
+				9F8F8752258B825500361F3C /* PyMlyokomtb200ms_predSTD.mlmodel */,
+				9F8F8753258B825500361F3C /* smdskjk200ms_std.mlmodel */,
+			);
+			path = pyMLmodel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,21 +372,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F8F86EB2587A39B00361F3C /* ScrollBigImageViewController.swift in Sources */,
+				9F8F8778258CABC500361F3C /* WebViewController.swift in Sources */,
 				9F8F868C25832DDA00361F3C /* TextViewController.swift in Sources */,
+				9F8F8718258A584700361F3C /* TryModelsViewController.swift in Sources */,
+				9F8F8740258B51DF00361F3C /* PyMLsb300ms15mei_pred.mlmodel in Sources */,
+				9F2A87BD259B0A5A0077E215 /* NewBigImageViewController.swift in Sources */,
 				9F8F869C258349DD00361F3C /* ScrollImageViewController.swift in Sources */,
 				9F8F86CE25875BDD00361F3C /* SensorDataCsvManager.swift in Sources */,
+				9F2FEBB925995F9100CC0439 /* SelfWindow.swift in Sources */,
+				9F8F86F72587A74400361F3C /* MyUIScrollView.swift in Sources */,
+				9F2FEBAF25995A7600CC0439 /* OwnViewController.swift in Sources */,
 				9F8F864925830CE000361F3C /* ViewController.swift in Sources */,
 				9F8F86A12585DA6300361F3C /* ToucheEventTextView.swift in Sources */,
+				9F2FEBB425995B5D00CC0439 /* OwnWKWebView.swift in Sources */,
 				9F8F864525830CE000361F3C /* AppDelegate.swift in Sources */,
 				9F8F868725831B1200361F3C /* ScreenshotViewController.swift in Sources */,
 				9F8F86D32587931F00361F3C /* MACin100out300.mlmodel in Sources */,
 				9F8F86A62585E19200361F3C /* MAC1by10.mlmodel in Sources */,
+				9FC22B9F259870D100AE05EB /* PySensors.swift in Sources */,
 				9F8F864725830CE000361F3C /* SceneDelegate.swift in Sources */,
+				9FC22B9A259229E300AE05EB /* TestDraw.swift in Sources */,
 				9F8F86B02586346D00361F3C /* TextReViewController.swift in Sources */,
 				9F8F86AB258615EC00361F3C /* MAC6by1_1210_ShinBatch54_Re.mlmodel in Sources */,
+				9F8F86FC2587AAFB00361F3C /* MACby10_45_attNasi.mlmodel in Sources */,
 				9F8F86B52586367400361F3C /* ToucheEventTextField.swift in Sources */,
 				9F8F86BF2587389E00361F3C /* MAC100_50_prea_yokofk.mlmodel in Sources */,
 				9F8F86BA2587216A00361F3C /* MAC1by10_Re.mlmodel in Sources */,
+				9F8F8754258B825500361F3C /* PyMlyokomtb200ms_predSTD.mlmodel in Sources */,
+				9F8F8748258B798B00361F3C /* PyMlyokomtb200ms_pred.mlmodel in Sources */,
+				9F8F8773258C7BC500361F3C /* FifthViewController.swift in Sources */,
+				9F8F8755258B825500361F3C /* smdskjk200ms_std.mlmodel in Sources */,
+				9F8F8762258C6D0D00361F3C /* ZoomscrollView.swift in Sources */,
+				9F8F875D258C4FA200361F3C /* PopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

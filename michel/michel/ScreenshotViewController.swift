@@ -6,8 +6,34 @@
 //
 
 import UIKit
+import CoreMotion
+import simd
+import CoreML
 
 class ScreenshotViewController: UIViewController{
+    
+    let motionManager2 = CMMotionManager()
+    var gyro = SIMD3<Double>.zero
+    var acc = SIMD3<Double>.zero
+    var gyroArray : [SIMD3<Double>] = []
+    var accArray : [SIMD3<Double>] = []
+    var cFLAG = false
+    
+    let xmsLen = 30
+    let model = try! MACby10_45_attNasi(configuration: MLModelConfiguration())
+    var currentState = try? MLMultiArray(
+        shape: [400 as NSNumber],
+        dataType: MLMultiArrayDataType.double)
+
+    var isPy = true
+    
+    var beganX : CGFloat!
+    var beganY : CGFloat!
+    var endX : CGFloat!
+    var endY : CGFloat!
+
+
+    
     private let numberOfPages = 6
     
     @IBOutlet private weak var mainScrollView: UIScrollView!
@@ -27,6 +53,7 @@ class ScreenshotViewController: UIViewController{
         tapGesture.delegate = self as? UIGestureRecognizerDelegate
         self.view.addGestureRecognizer(tapGesture)
 
+        startSensorUpdates(intervalSeconds: 0.01)
     }
     
     override func viewDidLayoutSubviews() {
@@ -167,8 +194,89 @@ class ScreenshotViewController: UIViewController{
         if sender.state == .ended {
         }
     }
+    
+    func getCoremlOutput() -> String{
+        // store sensor data in array for CoreML model
+        let dataNum = NSNumber(value:xmsLen)
+        let mlarrayGyroX = try! MLMultiArray(shape: [dataNum], dataType: MLMultiArrayDataType.double )
+        let mlarrayGyroY = try! MLMultiArray(shape: [dataNum], dataType: MLMultiArrayDataType.double )
+        let mlarrayGyroZ = try! MLMultiArray(shape: [dataNum], dataType: MLMultiArrayDataType.double )
+        let mlarrayGyroScalar = try! MLMultiArray(shape: [dataNum], dataType: MLMultiArrayDataType.double )
+        let mlarrayAccX = try! MLMultiArray(shape: [dataNum], dataType: MLMultiArrayDataType.double )
+        let mlarrayAccY = try! MLMultiArray(shape: [dataNum], dataType: MLMultiArrayDataType.double )
+        let mlarrayAccZ = try! MLMultiArray(shape: [dataNum], dataType: MLMultiArrayDataType.double )
+        let mlarrayAccScalar = try! MLMultiArray(shape: [dataNum], dataType: MLMultiArrayDataType.double )
+        
+        for index in 0...xmsLen-1 {
+            mlarrayGyroX[index] = gyroArray[index].x as NSNumber
+            mlarrayGyroY[index] = gyroArray[index].y as NSNumber
+            mlarrayGyroZ[index] = gyroArray[index].z as NSNumber
+            mlarrayGyroScalar[index] = gyroArray[index].x*gyroArray[index].y*gyroArray[index].z as NSNumber
+            mlarrayAccX[index] = accArray[index].x as NSNumber
+            mlarrayAccY[index] = accArray[index].y as NSNumber
+            mlarrayAccZ[index] = accArray[index].z as NSNumber
+            mlarrayAccScalar[index] = accArray[index].x*accArray[index].y*accArray[index].z as NSNumber
+        }
+        
+        guard let output = try? model.prediction(input:
+                                                    MACby10_45_attNasiInput(accScalar: mlarrayAccScalar,accX: mlarrayAccX, accY: mlarrayAccY, accZ: mlarrayAccZ, gyroScalar : mlarrayGyroScalar,  gyroX: mlarrayGyroX, gyroY: mlarrayGyroY, gyroZ: mlarrayGyroZ, stateIn: currentState!))
+        else {
+                fatalError("Unexpected runtime error.")
+        }
+        print(output.label)
+        return output.label
+    }
+    
+    func startSensorUpdates(intervalSeconds:Double) {
+        if motionManager2.isDeviceMotionAvailable{
+            motionManager2.deviceMotionUpdateInterval = intervalSeconds
+            
+            // start sensor updates
+            motionManager2.startDeviceMotionUpdates(to: OperationQueue.current!, withHandler: {(motion:CMDeviceMotion?, error:Error?) in
+                self.getMotionData(deviceMotion: motion!)
+                
+            })
+        }
+    }
+    func getMotionData(deviceMotion:CMDeviceMotion) {
+        gyro.x = deviceMotion.rotationRate.x
+        gyro.y = deviceMotion.rotationRate.y
+        gyro.z = deviceMotion.rotationRate.z
+        acc.x = deviceMotion.userAcceleration.x
+        acc.y = deviceMotion.userAcceleration.y
+        acc.z = deviceMotion.userAcceleration.z
 
+        gyroArray.append(gyro)
+        accArray.append(acc)
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+
+        gyroArray = gyroArray.suffix(xmsLen).map { $0 }
+        accArray = accArray.suffix(xmsLen).map { $0 }
+
+        if getCoremlOutput()=="cope"{
+            cFLAG = true
+            print("began: cope")
+            mainScrollView.isScrollEnabled = false
+        }else{
+            cFLAG = false
+            print("began: nomal")
+            mainScrollView.isScrollEnabled = true
+        }
+        let touchEvent = touches.first!
+        beganX = touchEvent.location(in: self.view).x
+        beganY = touchEvent.location(in: self.view).y
+        print("beganL: ",beganX,beganY)
+
+    }
+    
+    
 }
+
+
+
+
+
 
 extension ScreenshotViewController: UIScrollViewDelegate {
     
@@ -198,5 +306,40 @@ extension ScreenshotViewController: UIScrollViewDelegate {
             bottom: 0,
             right: 0
         )
+    }
+    
+// ユーザが指でドラッグを開始した場合に呼び出されるデリゲートメソッド.
+//    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+//
+//        pyM.gyroArray = pyM.gyroArray.suffix(pyM.xmsLen).map { $0 }
+//        pyM.accArray = pyM.accArray.suffix(pyM.xmsLen).map { $0 }
+//
+//        if pyM.getCoremlOutput()=="cope"{
+//            pyM.cFLAG = true
+//            print("began: cope")
+//            scrollView.isScrollEnabled = false
+//        }else{
+//            pyM.cFLAG = false
+//            print("began: nomal")
+//            scrollView.isScrollEnabled = true
+//        }
+//        print(#function)
+//    }
+
+    // ユーザがドラッグ後、指を離した際に呼び出されるデリゲートメソッド.
+    // velocity = points / second.
+    // targetContentOffsetは、停止が予想されるポイント？
+    // pagingEnabledがYESの場合には、呼び出されません.
+//    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+//        print(#function)
+//    }
+
+    // ユーザがドラッグ後、指を離した際に呼び出されるデリゲートメソッド.
+    // decelerateがYESであれば、慣性移動を行っている.
+    //
+    // 指をぴたっと止めると、decelerateはNOになり、
+    // その場合は「scrollViewWillBeginDecelerating:」「scrollViewDidEndDecelerating:」が呼ばれない？
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        print(#function)
     }
 }
